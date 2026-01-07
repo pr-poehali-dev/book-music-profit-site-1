@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Get author info",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "author": "object"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

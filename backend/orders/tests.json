@@ -1,0 +1,33 @@
+{
+  "tests": [
+    {
+      "name": "Create order",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "customer_email": "test@example.com",
+        "customer_name": "Test User",
+        "customer_phone": "+7 (999) 999-99-99",
+        "items": [
+          {"product_id": 1, "price": 599}
+        ]
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "order_id": "number",
+        "status": "pending"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get all orders",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "orders": "array"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

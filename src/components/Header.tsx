@@ -32,6 +32,9 @@ const Header = ({ favorites, cart, activeTab, setActiveTab, removeFromCart, getT
             <Button variant="ghost" onClick={() => setActiveTab('subscription')}>
               Подписка
             </Button>
+            <Button variant="ghost" onClick={() => setActiveTab('about')}>
+              Об авторе
+            </Button>
             <Button variant="ghost" onClick={() => setActiveTab('reviews')}>
               Отзывы
             </Button>

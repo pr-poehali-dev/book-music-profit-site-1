@@ -4,6 +4,7 @@ import CatalogSection from '@/components/CatalogSection';
 import SubscriptionSection from '@/components/SubscriptionSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import ContactSection from '@/components/ContactSection';
+import AboutAuthorSection from '@/components/AboutAuthorSection';
 
 const Index = () => {
   const [cart, setCart] = useState<any[]>([]);
@@ -187,6 +188,10 @@ const Index = () => {
 
         {activeTab === 'reviews' && (
           <ReviewsSection reviews={reviews} />
+        )}
+
+        {activeTab === 'about' && (
+          <AboutAuthorSection />
         )}
 
         {activeTab === 'contact' && (
